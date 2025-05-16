@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <title>ADNU EXCHANGE-HUB</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+  <div class="header">
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+    <div class="title">WELCOME!!</div>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="menu">
+        <div class="nav-group">
+          <a href="{% url 'home' %}" class="active"><i class="fas fa-tags"></i> Buy</a>
+          <div class="divider"></div>
+          <a href="{% url 'sell' %}"><i class="fas fa-box-open"></i> Sell</a>
+          <div class="divider"></div>
+          <a href="{% url 'contacts' %}"><i class="fas fa-address-book"></i> Contacts</a>
+          <div class="divider"></div>
+          <a href="{% url 'wishlist:wishlist' %}"><i class="fas fa-heart"></i> Wishlist</a>
+          <div class="divider"></div>
+          <a href="{% url 'wishlist:view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <div class="divider"></div>
+          <a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>
+          <div class="divider"></div>
+          <a href="{% url 'settings' %}"><i class="fas fa-cogs"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="logout">
+        <a href="{% url 'login' %}"><i class="fas fa-sign-out-alt"></i> Log out</a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <h2>Book Section</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="{% static 'images/book1.png' %}">
+          <div class="item-title">Managing Information Technology</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book2.png' %}">
+          <div class="item-title">Management on the Tech</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book3.png' %}">
+          <div class="item-title">Technology Strategies</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book4.png' %}">
+          <div class="item-title">Fundamentals of Nursing</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book5.png' %}">
+          <div class="item-title">Nursing Care</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book6.png' %}">
+          <div class="item-title">General Psychology</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book7.png' %}">
+          <div class="item-title">Introduction to Psychology</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="{% static 'images/book8.png' %}">
+          <div class="item-title">Electrical Engineering</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book9.png' %}">
+          <div class="item-title">Foundations of Engineering</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book10.png' %}">
+          <div class="item-title">Physics</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book11.png' %}">
+          <div class="item-title">Textbook Electrical Engineering</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book12.png' %}">
+          <div class="item-title">Electrical Engineering 2.0</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book13.png' %}">
+          <div class="item-title">Financial Management</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book14.png' %}">
+          <div class="item-title">NON-Accountants</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="{% static 'images/book15.png' %}">
+          <div class="item-title">Accounting Simple</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book16.png' %}">
+          <div class="item-title">Financial Accounting</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book17.png' %}">
+          <div class="item-title">Digital Marketing</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book18.png' %}">
+          <div class="item-title">Digital Marketing 2.0v</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book19.png' %}">
+          <div class="item-title">Philippine LAW</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book20.png' %}">
+          <div class="item-title">Legislation</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book21.png' %}">
+          <div class="item-title">Political Science</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="{% static 'images/book22.png' %}">
+          <div class="item-title">Political Science 2.2</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book23.png' %}">
+          <div class="item-title">Critical Care Nursing</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book24.png' %}">
+          <div class="item-title">Critical Care Nursing</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book25.png' %}">
+          <div class="item-title">Travel and Tourism</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book26.png' %}">
+          <div class="item-title">Tourism and Hospitality</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book27.png' %}">
+          <div class="item-title">Tourism and Hospitality 2</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+        <div class="product-card">
+          <img src="{% static 'images/book28.png' %}">
+          <div class="item-title">Tourism 2.0</div>
+          <a href="{% url 'moreinfo' %}">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <title>ADNU EXCHANGE-HUB</title>
+  <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+</head>
+
+<body>
+  <div class="header">
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+    <div class="title">WELCOME!!</div>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="menu">
+        <div class="nav-group">
+          <a href="{% url 'home' %}" class="active"><i class="fas fa-tags"></i> Buy</a>
+          <div class="divider"></div>
+          <a href="{% url 'sell' %}"><i class="fas fa-box-open"></i> Sell</a>
+          <div class="divider"></div>
+          <a href="{% url 'contacts' %}"><i class="fas fa-address-book"></i> Contacts</a>
+          <div class="divider"></div>
+          <a href="{% url 'wishlist:wishlist' %}"><i class="fas fa-heart"></i> Wishlist</a>
+          <div class="divider"></div>
+          <a href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <div class="divider"></div>
+          <a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>
+          <div class="divider"></div>
+          <a href="{% url 'settings' %}"><i class="fas fa-cogs"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="logout">
+        <a href="{% url 'loading' %}"><i class="fas fa-sign-out-alt"></i> Log out</a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <div class="user-management">
+        <h2>User Management</h2>
+
+        <div class="content-wrapper">
+          <div class="left-section">
+            <div class="profile-section">
+              <h3>Profile</h3>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="First Name" />
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Last Name" />
+              <label for="email">Email</label>
+              <input type="text" id="email" value="@gbox.adnu.edu.ph" />
+              <button class="save-btn">Save</button>
+            </div>
+
+            <div class="divider"></div>
+
+     
+
+          <div class="image-section">
+            <img src="{% static 'images/profile.png' %}" alt="Profile Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/settings.js' %}"></script>
+</body>
+
+</html>

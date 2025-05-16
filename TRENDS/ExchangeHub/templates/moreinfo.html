@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <title>Shop Information</title>
+  <link rel="stylesheet" href="{% static 'css/moreinfo.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+    <div class="title">Shop Information</div>
+  </div>
+
+  <div class="container">
+    <div class="shop-info-card">
+      <div class="shop-image">
+        <img src="{% static 'images/lupit.jpg' %}" alt="Shop Image">
+      </div>
+
+      <div class="shop-details">
+        <h2>Shop Name</h2>
+        <p class="shop-description">
+          Welcome to our exclusive nursing bookshop, designed to provide aspiring and professional nurses with the most comprehensive resources. Our collection includes textbooks, study guides, and reference materials, carefully selected to meet the needs of both nursing students and practicing professionals. Whether you are studying for exams, seeking the latest research, or looking for practical advice, our shop offers a wide variety of resources to support your educational journey. We understand the challenges nurses face, and we're committed to offering content that is both informative and practical, ensuring you stay ahead in your field. Visit us for a curated selection of books that cover every aspect of nursing, from clinical practice to the latest medical advancements.
+        </p>
+
+        <div class="rental-details">
+          <h3>Rental Information</h3>
+          <p>Rent a book for a day, a week, or longer! We offer flexible rental plans tailored to your needs.</p>
+          <ul>
+            <li><strong>Daily Rental:</strong> P10/day</li>
+            <li><strong>Weekly Rental:</strong> P40/week</li>
+            <li><strong>Monthly Rental:</strong> P150/month</li>
+          </ul>
+        </div>
+
+     
+        <div class="action-buttons">
+          <button class="save-btn">Buy Now</button>
+          <button class="rent-btn">Rent Now</button>
+          <button class="rent-btn">Trade Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/moreinfo.js' %}"></script>
+</body>
+
+</html>

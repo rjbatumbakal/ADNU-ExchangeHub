@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>ADNU EXCHANGE-HUB</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+</head>
+<body>
+
+  <div id="splash-screen">
+    <img src="{% static 'images/logo.png' %}" alt="Splash Logo" class="logo">
+  </div>
+
+  <div id="main-content" style="display:none;">
+    <img src="{% static 'images/bg1.png' %}" alt="bg" class="bg">
+    
+    <div class="container">
+      <img src="{% static 'images/logo.png' %}" alt="logo" class="logo">
+      <h3 class="beta">Beta Version</h3>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="email" id="email" placeholder="ADNU GBOX">
+      </div>
+      
+      <div class="input-group">
+        <i class="fas fa-lock "></i>
+        <input type="password" id="password" placeholder="PASSWORD">
+      </div>
+
+      <div>
+        <a href="{% url 'loading' %}"> 
+          <button class="login-btn">Log in</button>
+      </div>
+
+      <a href='loading' class="forgot">Forgot Password?</a>
+
+      <button class="gbox-btn">
+        <img src="{% static 'images/google.png' %}" class="google">
+        <a href="{% url 'social:begin' 'google-oauth2' %}?next={% url 'loading' %}">Login with Google</a>
+      </button>
+
+    </div>
+  </div>
+
+  <script src="{% static 'js/login.js' %}"></script>
+
+</body>
+</html>

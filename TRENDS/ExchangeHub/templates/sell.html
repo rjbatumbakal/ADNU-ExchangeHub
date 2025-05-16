@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <title>ADNU EXCHANGE-HUB</title>
+  <link rel="stylesheet" href="{% static 'css/sell.css' %}">
+</head>
+
+<body>
+  <div class="header">
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+    <div class="title">WELCOME!!</div>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="menu">
+        <div class="nav-group">
+          <a href="{% url 'home' %}" class="active"><i class="fas fa-tags"></i> Buy</a>
+          <div class="divider"></div>
+          <a href="{% url 'sell' %}"><i class="fas fa-box-open"></i> Sell</a>
+          <div class="divider"></div>
+          <a href="{% url 'contacts' %}"><i class="fas fa-address-book"></i> Contacts</a>
+          <div class="divider"></div>
+          <a href="{% url 'wishlist:wishlist' %}"><i class="fas fa-heart"></i> Wishlist</a>
+          <div class="divider"></div>
+          <a href="{% url 'wishlist:view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <div class="divider"></div>
+          <a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>
+          <div class="divider"></div>
+          <a href="{% url 'settings' %}"><i class="fas fa-cogs"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="logout">
+        <a href="{% url 'loading' %}"><i class="fas fa-sign-out-alt"></i> Log out</a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <h2>Create Listing</h2>
+
+      <div class="listing-form">
+        <form>
+          <div class="form-section">
+            <input type="text" placeholder="Type/Category">
+            <input type="text" placeholder="Listing Title/Name your Listing">
+
+            <h3>About the item</h3>
+            <label>Condition</label>
+            <div class="option-group condition-buttons">
+              <button type="button" class="condition-button">Brand</button>
+              <button type="button" class="condition-button">Well</button>
+              <button type="button" class="condition-button">Heavily used</button>
+            </div>
+
+            <label>Price</label>
+            <div class="option-group price-buttons">
+              <button type="button" class="condition-button">For Sale</button>
+              <button type="button" class="condition-button">For Rent</button>
+              <button type="button" class="condition-button">For</button>
+            </div>
+
+            <input type="text" placeholder="Price of Listing">
+            <label>Description</label>
+            <textarea rows="10" cols="15" placeholder="Describe what you are selling"></textarea>
+
+            <h3>Deal Method</h3>
+            <div class="option-group deal-buttons">
+              <button type="button" class="condition-button">Meet-up</button>
+              <button type="button" class="condition-button">Delivery</button>
+            </div>
+
+            <h3>Payment Method</h3>
+            <div class="option-group payment-buttons">
+              <button type="button" class="condition-button">Cash on</button>
+              <button type="button" class="condition-button">Payment</button>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit">List Now</button>
+            </div>
+          </div>
+
+          <div class="form-preview">
+            <div class="image-box">
+              <img id="preview-image" src="{% static 'images/bruha.png' %}" alt="Preview">
+            </div>
+            <label class="upload-label">Insert Picture</label>
+            <input class="file-input" type="file" accept="image/*" onchange="previewImage(event)">
+          </div>
+        </form>
+      </div>
+      <div class="availability-calendar" style="margin-top: 40px; padding: 20px; border-top: 1px solid #ccc;">
+        <h3>📅 Set Availability Date</h3>
+        <input type="date" id="availabilityDate" style="padding: 8px; font-size: 1em;">
+        <p id="availabilityMessage" style="margin-top: 10px; color: #333;"></p>
+      </div>
+      
+      <script>
+        document.getElementById('availabilityDate').addEventListener('change', function () {
+          const selectedDate = this.value;
+          if (selectedDate) {
+            document.getElementById('availabilityMessage').innerText =
+              `Item will be available on ${selectedDate}.`;
+          }
+        });
+      </script>
+      
+    </div>
+  </div>
+
+  <script src="{% static 'js/sell.js' %}"></script>
+</body>
+</html>

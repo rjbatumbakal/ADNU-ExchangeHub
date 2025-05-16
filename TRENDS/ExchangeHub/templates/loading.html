@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <title>ADNU EXCHANGE-HUB</title>
+  <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+</head>
+<body>
+
+  <div class="splash-screen" id="splash-screen">
+    <img src="{% static 'images/logo.png' %}" class="logo">
+    <h1>“We appreciate your continued trust in us. <br> Explore the latest updates and continue <br> enjoying our services.”</h1>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        window.location.href = "{% url 'home' %}" 
+      }, 5000);  //loading the image and text for 5 secs
+    };
+  </script>
+
+</body>
+</html>
